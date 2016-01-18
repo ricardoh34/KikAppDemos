@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <application generateAndroid="true" generateiOS="false">
+        <main>list_companies.php</main>
+        <services>http://demo.kikapptools.com/CRMManager/services/</services>
+    	<android navigationStyle="Default" layoutOrientation="Portrait">   
+    	    <Theme>Android</Theme>     	
+        	<versionCode>1</versionCode>
+        	<versionName>1.0</versionName>
+        	<packagedName></packagedName>
+        	<lunchImage>lunchimage.png</lunchImage>
+        	<applicationIcon>appicon.png</applicationIcon>        	
+        	<applicationTitle>CRM Manager</applicationTitle>
+        </android>
+        <iOS navigationStyle="Default" layoutOrientation="Portrait">
+            <Theme>iOSTheme</Theme>
+        	<versionCode>1</versionCode>
+        	<versionName>1.0</versionName>
+        	<packagedName></packagedName>
+        	<applicationIcon></applicationIcon>
+        </iOS>
+       </application>	
+</manifest>

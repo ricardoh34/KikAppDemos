@@ -1,0 +1,14 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+##### htaccess version 1.0 #####
+
+RewriteRule ^insert_company_Level_Detail$ insert_company_Level_Detail.php [NC,L]
+RewriteRule ^insert_company_save$ insert_company_save.php [NC,L]
+RewriteRule ^list_companies_Level_Detail$ list_companies_Level_Detail.php [NC,L]
+RewriteRule ^list_companies_Level_Detail_list$ list_companies_Level_Detail_list.php [NC,L]
+RewriteRule ^update_company_Level_Detail/?$  update_company_Level_Detail.php [NC]
+RewriteRule ^update_company_save$ update_company_save.php [NC,L]
+RewriteRule ^view_company_Level_Detail/?$  view_company_Level_Detail.php [NC]
+RewriteRule ^view_company_delete$ view_company_delete.php [NC,L]
+

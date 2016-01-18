@@ -1,0 +1,69 @@
+/** 
+ * Style for Android appliaction.
+ * @version 1.0
+ */
+
+application{
+	
+}
+ 
+applicationBars{
+	background-color:"#B71C1C";
+	status-bar-color:"#C62828";
+}
+
+applicationBars.transparent{
+	background-color:"Transparent";
+	status-bar-color:"Transparent";
+}
+ 
+input{
+ 	font-family:"Roboto-Regular.ttf";
+ 	font-size:"16";
+}
+
+input.title{
+	 font-size:"20";
+	 font-family:"Roboto-Light.ttf";
+}
+  
+InputReadOnly{
+	
+}  
+
+button{
+	border-style:"solid";
+	font-family:"Roboto-Light.ttf";
+}
+  
+image.list{
+	border-radius:"43";
+	margin-top:"10dip";
+	margin-bottom:10dip;
+	margin-left:"10";
+	margin-Right:"10dip";
+	placeholder-image:url("img/no_image.png");
+}
+
+image.roundBorder{	
+	border-style:"solid";
+	border-width:0;
+	border-color:"#FFFFFF";
+	border-radius:"75";
+	margin-top:"10dip";
+	margin-bottom:10dip;
+	margin-left:"10";
+	margin-Right:"10dip";
+	placeholder-image:url("img/no_image.png");
+}
+
+table.margin{
+	margin-top:"10dip";
+	margin-bottom:10dip;
+	margin-left:"10";
+	margin-Right:"10dip";	
+}
+
+table.image{
+	background-image:url("img/background_table.png");	
+}
