@@ -1,0 +1,264 @@
+/**
+ * Theme CSS Android.
+ * @Version 1.0
+ */
+
+application{
+	
+}
+ 
+applicationBars{
+	background-color:"#EE4053";
+	status-bar-color:"#D6364A";
+}
+
+input{
+ 	font-family:"Roboto-Regular.ttf";
+ 	font-size:"14";
+ 	forecolor:"Black 79%";
+}
+
+input.titleblack{
+	 font-size:"20";
+	 font-family:"Roboto-Light.ttf";
+	 forecolor:"Black 89%";
+}
+
+input.form{
+	background-color:"#AF2323 45%";
+	margin-top:10dip;	
+	margin-bottom:10dip;
+	padding-left:5dip;
+	forecolor:#FFFFFF;
+}
+
+input.textPrice{
+	forecolor:#D6364A;
+	font-weight : "bold";
+}
+
+input.textListwhite{
+	forecolor:#FFFFFF;
+	font-weight : "bold";
+	margin-right:10dip;
+}
+
+input.categories {
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"16";	
+ 	forecolor:"#ffffff 95%";
+ 	margin-left:15dip; 
+}
+
+input.textwhite{
+	forecolor:#FFFFFF;
+}
+
+input.textTitlewhite{
+	forecolor:#FFFFFF;
+	font-weight : "bold";
+}
+
+button{
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"14";		
+}
+
+button.Form{
+	background-color:"#FFFFFF";
+	font-weight:"bold";
+	forecolor:#B71C1C;
+	margin-left:10dip;
+	margin-right:10dip;
+	margin-bottom:10dip;
+}
+
+button.red{
+	background-color:#EE4053;
+	font-weight:"bold";
+	forecolor:"#FFFFFF";	
+	margin-top:15dip;
+	margin-left:0dip;
+	margin-right:0dip;
+	margin-bottom:0dip;
+}
+
+label{
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"14";
+ 	forecolor:"#FFFFFF";	
+}
+
+label.Titlelogin {
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"20";	
+}
+
+label.MenuOption {
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"17";	
+ 	forecolor:"#ffffff 95%";
+ 	background-color:"";
+}
+
+table{
+	margin-bottom:0dip;
+	margin-top:0dip;
+	margin-left:0dip;	
+	margin-right:0dip;	
+	background-color:"";
+}
+
+table.gray{
+	background-color: #DCDCDC;
+}
+
+table.MenuOption{
+	margin-bottom:5dip;
+	margin-top:5dip;
+	margin-left:5dip;	
+	margin-right:5dip;
+}
+
+table.Menu{
+	background-color:"#323232";
+}
+
+table.product {
+	margin-bottom:5dip;
+	margin-top:5dip;
+	margin-left:5dip;	
+}
+
+table.productThumb {
+	padding-bottom:0dip;
+	padding-top:5dip;
+	padding-left:5dip;
+	background-color:"Black 45%";
+}
+
+table.productMargin {
+	background-color:"Black 45%";
+	padding-left:5dip;
+	padding-right:5dip;
+	
+}
+
+table.grid {
+	background-color: #FFFFFF;
+}
+
+table.background {
+	background-image: urls("img/background_red.png");
+}
+
+table.backgroundforms {
+	background-color:#FFFFFF;
+}
+
+table.TableDetailMain {
+	margin-bottom:10dip;
+	margin-top:10dip;
+	margin-left:10dip;
+	margin-right:10dip;
+
+	padding-bottom:10dip;
+	padding-top:10dip;
+	padding-left:10dip;
+	padding-right:10dip;
+
+	background-color:#FFFFFF;
+	border-style:"Solid";
+	border-color:#D8D8D8;
+	border-width:"1dip";
+	border-radius:"1dip";
+}
+
+table.GridProduct {
+	margin-bottom:10dip;
+	margin-top:10dip;
+	margin-left:10dip;
+	margin-right:10dip;
+	background-color:#FFFFFF;
+	border-style:"Solid";
+	border-color:#D8D8D8;
+	border-width:"1dip";
+	border-radius:"1dip";
+}
+
+
+table.forms {	
+	margin-left:10dip;
+	margin-right:10dip;
+	margin-bottom:20dip;
+}
+
+table.checkout {
+	padding-left:10dip;
+	padding-right:10dip;
+	padding-bottom:5dip;
+	padding-top:5dip;
+}
+
+image{
+	
+}
+
+image.imageList {
+	margin-left:0dip;
+	margin-right:0dip;		
+	margin-top:0dip;
+	scale-type:"scaleAspectFillKeepingAspect";	
+}
+
+image.checkout {
+	margin-right:10dip;		
+	scale-type:"scaleAspectFillKeepingAspect";	
+}
+
+image.imageList2 {
+	margin-left:0dip;
+	margin-right:0dip;		
+	margin-top:5dip;
+	scale-type:"scaleAspectFillKeepingAspect";	
+}
+
+image.menu {	
+	margin-right:5dip;
+	width:"34dip";
+	height:"34dip";		
+	scale-type: "scaleToFill";	
+}
+
+grid{
+	Highlighted-Background-Color: "#DBDBDB";
+}
+
+grid.Thumb{
+	//ver estas opciones porque no las esta cargando.
+	Show-Horizontal-Line-Separator-Between-Rows:"true";
+	Horizontal-Line-Separator:"HorizontalLineThumb";
+}
+
+HorizontalLine{}
+
+HorizontalLine.Thumb{
+	background-color: #FFFFFF;
+	Height:"5dip";
+}
+
+Tab{
+	Tab-Strip-Background-Color:#94C641;
+	Tab-Strip-Indicator-color:"Gainsboro";
+	Tab-Strip-Separator-Color:#DBDBDB;
+}
+
+TabPage{
+	
+}
+
+PageController{
+	background-color:#DCDCDC;
+	Indicator-Selected-Color:"#EE4053";
+	Indicator-Unselected-Color:#EE4053;	
+}

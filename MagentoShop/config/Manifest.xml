@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <application generateAndroid="true" generateiOS="false">
+        <main>shop.php</main>
+        <services>http://demo.kikapptools.com/MagentoShop/services/</services>
+    	<android navigationStyle="Slide" layoutOrientation="Portrait">   
+    	    <Theme>AndroidTheme</Theme>     	
+        	<versionCode>1</versionCode>
+        	<versionName>1.0</versionName>
+        	<packagedName></packagedName>
+        	<lunchImage>lunch.png</lunchImage>
+        	<applicationIcon>appicon.png</applicationIcon>        	
+        	<applicationTitle>Magento Shop</applicationTitle>
+        </android>
+        <iOS navigationStyle="Default" layoutOrientation="Portrait">
+            <Theme>iOSTheme</Theme>
+        	<versionCode>1</versionCode>
+        	<versionName>1.0</versionName>
+        	<packagedName></packagedName>
+        	<applicationIcon></applicationIcon>
+        </iOS>
+       </application>	
+</manifest>
