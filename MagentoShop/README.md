@@ -1,4 +1,4 @@
-## Skan the QR code and try this app ##
+## Skan QR code and try this app ##
 
 ![alt text][id]
 
