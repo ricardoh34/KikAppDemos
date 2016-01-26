@@ -2,4 +2,4 @@
 
 ![alt text][id]
 
-[id]: http://qreateandtrack.com/files/2009/12/coupon.png
+[id]: https://wiki.kikapptools.com/wp-content/uploads/2016/01/shopQR.png
