@@ -2,4 +2,4 @@
 
 ![alt text][id]
 
-[id]: https://wiki.kikapptools.com/wp-content/uploads/2016/01/crmQR.png
+[id]: https://wiki.kikapptools.com/wp-content/uploads/2016/03/CRM_QR.png
