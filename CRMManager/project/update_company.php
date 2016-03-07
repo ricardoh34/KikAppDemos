@@ -1,7 +1,7 @@
 <?php 
 /**
  * Update company.
- * @author Gecko
+ * @author KikApp
  * @version 1.0
  */
 

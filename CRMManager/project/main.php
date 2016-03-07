@@ -1,7 +1,7 @@
 <?php 
 /**
  * Main object.
- * @author Gecko
+ * @author KikApp
  * @version 1.0
  */
 

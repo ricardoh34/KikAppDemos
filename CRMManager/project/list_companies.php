@@ -1,7 +1,7 @@
 <?php 
 /**
  * List of companies
- * @author Gecko
+ * @author KikApp
  * @version 1.0
  */
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright 2015 Gecko
+ * Copyright 2015 KikApp
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -318,7 +318,8 @@ class HttpClient{
      */
 
     public function jsonEncode(&$string){
-        $string = json_encode($string, true);
+    	$string = json_encode($string, true);
+    	//$string = json_encode($string, JSON_UNESCAPED_UNICODE);
         $string = str_replace("\\","", $string);
 
         if($string){
@@ -439,5 +440,24 @@ function recorridaRecursiva($matriz, $padre=null, $GXDynPropConditions, $GXDynPr
 
     }
 
+    /**
+     * Create services for Dynamic Combo Box.
+     * @access public
+     * @since 1.0
+     * @param array $array, original array
+     * @param array $key, name of key
+     * @param data $val, name to value
+     * @return String with elements found
+     */
+    function createSvc($result,$key,$val){
+    	$print = "[";
+    	foreach ($result as $value)
+    	{
+    		$print .= "[\"" . $value->$key  . "\"" . ",\"" . $value->$val . "\"],";
+    	}
+    	$print .= "]";
+    	return $print;
+    }
+    
 
 ?>

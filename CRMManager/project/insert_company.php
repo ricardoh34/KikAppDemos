@@ -1,7 +1,7 @@
 <?php 
 /**
  * Detail company.
- * @author Gecko
+ * @author KikApp
  * @version 1.0
  */
 

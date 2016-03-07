@@ -11,6 +11,23 @@
         	<lunchImage>lunchimage.png</lunchImage>
         	<applicationIcon>appicon.png</applicationIcon>        	
         	<applicationTitle>CRM Manager</applicationTitle>
+        	<!-- Android Maps API Key -->
+        	<MapAPIKey/>            	
+        	<!-- Adds -->
+        	<EnableAds>False</EnableAds>
+        	<AdsProvider></AdsProvider> <!-- AdMob - Mobfox - SmartAd -->
+        	<AdMobPublisherId></AdMobPublisherId>
+        	<!-- Analytics -->
+        	<EnableAnalytics>False</EnableAnalytics>
+        	<GoogleAnalyticsTrackerId></GoogleAnalyticsTrackerId>
+        	<!-- Twitter -->
+        	<TwitterAppKey></TwitterAppKey>
+        	<TwitterAppSecret></TwitterAppSecret>
+        	<!-- Facebook -->
+        	<FacebookAppId></FacebookAppId>
+        	<!-- YouTube -->
+        	<AndroidYoutubeAPIKey></AndroidYoutubeAPIKey>        	
+        	
         </android>
         <iOS navigationStyle="Default" layoutOrientation="Portrait">
             <Theme>iOSTheme</Theme>

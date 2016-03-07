@@ -2,7 +2,7 @@
 
 /**
 * Rest client services.
-* @author Gecko PHP Generator
+* @author KikApp PHP Generator
 * @version 1.0 
 */
 
