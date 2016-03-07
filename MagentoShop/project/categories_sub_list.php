@@ -6,7 +6,7 @@
 $win = new SDPanel();
 $win -> setCaption("");
 
-Data::getParm($cat);
+Data::getParm($cat,$name);
 
 $table = new Table();
 
@@ -51,6 +51,10 @@ function load_grid(){
 		$id 	= $product['id'];
 		$name 	= $product['name'];
 	}	
+}
+
+function start(){
+	$win -> setCaption($name);
 }
 
 ?>

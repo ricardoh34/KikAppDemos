@@ -26,7 +26,7 @@ $win -> addControl($table);
 $win -> Render();
 
 function action(){
-	$win -> Open("categories_sub_list",$id);
+	$win -> Open("categories_sub_list",$id,$name);
 }
 
 function load_grid(){

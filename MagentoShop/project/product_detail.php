@@ -101,7 +101,7 @@ $table -> setRowsStyle("250dip;100%");
 $win -> addControl($table);
 
 function start(){
-	//$win -> setCaption($title);
+	$win -> setCaption($title);
 }
 
 function load_image(){

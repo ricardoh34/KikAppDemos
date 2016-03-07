@@ -7,10 +7,27 @@
     	    <Theme>AndroidTheme</Theme>     	
         	<versionCode>1</versionCode>
         	<versionName>1.0</versionName>
-        	<packagedName></packagedName>
+        	<packagedName>com.kikapp.magentoshop</packagedName>
         	<lunchImage>lunch.png</lunchImage>
         	<applicationIcon>appicon.png</applicationIcon>        	
         	<applicationTitle>Magento Shop</applicationTitle>
+        	<!-- Android Maps API Key -->
+        	<MapAPIKey/>            	
+        	<!-- Adds -->
+        	<EnableAds>False</EnableAds>
+        	<AdsProvider></AdsProvider> <!-- AdMob - Mobfox - SmartAd -->
+        	<AdMobPublisherId></AdMobPublisherId>
+        	<!-- Analytics -->
+        	<EnableAnalytics>False</EnableAnalytics>
+        	<GoogleAnalyticsTrackerId></GoogleAnalyticsTrackerId>
+        	<!-- Twitter -->
+        	<TwitterAppKey></TwitterAppKey>
+        	<TwitterAppSecret></TwitterAppSecret>
+        	<!-- Facebook -->
+        	<FacebookAppId></FacebookAppId>
+        	<!-- YouTube -->
+        	<AndroidYoutubeAPIKey></AndroidYoutubeAPIKey>        	
+        	
         </android>
         <iOS navigationStyle="Default" layoutOrientation="Portrait">
             <Theme>iOSTheme</Theme>

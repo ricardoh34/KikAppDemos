@@ -1,6 +1,6 @@
 <?php 
 /***
- * Pantalla para editar los datos del usuario.
+ * Edit my data.
  */
 
 $win = new SDPanel();
@@ -19,8 +19,8 @@ $table_form -> setRowsStyle("76dip;76dip;76dip");
 $name 	= new InputText();
 $name -> setClass("inputForm");
 
-$ape 	= new InputText();
-$ape -> setClass("inputForm");
+$last_name 	= new InputText();
+$last_name -> setClass("inputForm");
 
 $email 	= new InputEmail();
 $email -> setClass("inputForm");
@@ -31,7 +31,7 @@ $btn_save -> setClass("buttonform");
 $btn_save -> onTap(save());
 
 $table_form -> addControl($name,1,1);
-$table_form -> addControl($ape,2,1);
+$table_form -> addControl($last_name,2,1);
 $table_form -> addControl($email,3,1);
 
 $table_button = new Table();
@@ -54,14 +54,14 @@ function refresh(){
 	
 	//Asignamos valores a los inputs.
 	$name = $sdtUser['firstname'];
-	$ape = $sdtUser['lastname'];
+	$last_name = $sdtUser['lastname'];
 	$email = $sdtUser['email'];
 
 }
 
 function save(){
 	ProgressIndicator::Show();
-	$url = "http://www.demo.kikapptools.com/magento/apiGecko/clientes.php?metodo=updateUser&name=".$name."&lastname=".$ape."&email=".$email."&customerToken=".$token;
+	$url = "http://www.demo.kikapptools.com/magento/apiGecko/clientes.php?metodo=updateUser&name=".$name."&lastname=".$last_name."&email=".$email."&customerToken=".$token;
 	$hc = new httpClient();
 	$rs = $hc -> Execute("GET",$url);
 	

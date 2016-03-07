@@ -1,6 +1,6 @@
 <?php 
 /***
- * Detalle del producto.
+ * Detail of product.
  */
 
 $win = new SDPanel();
