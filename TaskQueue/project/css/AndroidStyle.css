@@ -1,0 +1,122 @@
+/** 
+ * Style for Android appliaction.
+ * 
+ */
+
+ 
+applicationBars{
+	background-color:"#18be9c";
+	status-bar-color:"#24d5b2";
+}
+
+image.actionBarIcon {	
+	margin-right:5dip;
+	width:"20dip";
+	height:"20dip";		
+	scale-type: "scaleToFill";	
+}
+
+input.Title{
+	font-size:"15";
+	font-family:"Roboto-Light.ttf";
+	font-weight:"bold";
+	forecolor:"#000000";
+	margin-left:5dip;
+}
+input.Common{
+	font-size:"13";
+	font-family:"Roboto-Light.ttf";
+	forecolor:"#262626";
+}
+
+button.Form{	
+	font-weight:"bold";
+	forecolor:"#18be9c";
+	font-size:"17";
+	margin-left:8dip;
+	margin-right:8dip;
+	border-style:"Solid";
+	border-color:#18be9c;
+	border-width:"1dip";
+	border-radius:"5dip";
+	background-color:"#FFFFFF";
+	
+}
+
+table.Menu{
+	background-color:"#fafafa";
+}
+
+table.Background {
+	background-color:"#fafafa";
+}
+
+table.Forms {	
+	margin-left:10dip;
+	margin-right:10dip;
+	margin-bottom:20dip;
+}
+table.MenuItem{
+	margin-top:5dip;
+	margin-left:5dip;	
+	margin-right:5dip;
+	background-color:"#FFFFFF";
+}
+
+label.MenuItem{
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"15";	
+ 	forecolor:"#000000";
+}
+
+image.MenuItem {	
+	margin-right:5dip;
+	width:"26dip";
+	height:"26dip";		
+	scale-type: "scaleToFill";	
+}
+
+image.ListItem {	
+	margin-left:10dip;
+	margin-top:5dip;
+	margin-bottom:5dip;
+	width:"45dip";
+	height:"45dip";		
+	scale-type: "scaleToFill";	
+}
+
+input.check {
+	border-style:"Solid";
+	border-color:#D8D8D8;
+	border-width:"1dip";
+	border-radius:"1dip";
+}
+table.DetailMain {
+	margin-top:2dip;
+	margin-left:5dip;
+	margin-right:5dip;
+	background-color:#FFFFFF;
+	border-style:"Solid";
+	border-color:#D8D8D8;
+	border-width:"1dip";
+	border-radius:"1dip";
+}
+
+/*
+grid{
+	Highlighted-Background-Color: "#DBDBDB";
+}
+
+grid.Thumb{
+	//ver estas opciones porque no las esta cargando.
+	Show-Horizontal-Line-Separator-Between-Rows:"true";
+	Horizontal-Line-Separator:"HorizontalLineThumb";
+}
+
+HorizontalLine{}
+
+HorizontalLine.Thumb{
+	background-color: #FFFFFF;
+	Height:"5dip";
+}
+*/

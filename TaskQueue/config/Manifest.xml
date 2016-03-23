@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest>
+    <application generateAndroid="true" generateiOS="false">
+        <main>main.php</main>
+        <services>http://demo.kikapptools.com/taskManager/services/</services>
+    	<android layoutOrientation="Portrait" navigationStyle="Slide">   
+    	    <Theme>AndroidStyle</Theme>     	
+        	<versionCode>1</versionCode>
+        	<versionName>1.0</versionName>
+        	<packagedName>com.kikapp.taskqueue11</packagedName>
+        	<lunchImage>lunchimageTaskManager.png</lunchImage>
+        	<applicationIcon>taskIcon.png</applicationIcon>          	
+        	<applicationTitle>Task Queue</applicationTitle>
+        	<!-- Android Maps API Key -->
+        	<MapAPIKey/>    
+        	<!-- Adds -->
+        	<EnableAds>False</EnableAds>
+        	<AdsProvider/> <!-- AdMob - Mobfox - SmartAd -->
+        	<AdMobPublisherId/>
+        	<!-- Analytics -->
+        	<EnableAnalytics>False</EnableAnalytics>
+        	<GoogleAnalyticsTrackerId/>
+        	<!-- Twitter -->
+        	<TwitterAppKey/>
+        	<TwitterAppSecret/>
+        	<!-- Facebook -->
+        	<FacebookAppId/>
+        	<!-- YouTube -->
+        	<AndroidYoutubeAPIKey/>        	
+        </android>
+        <iOS layoutOrientation="Portrait" navigationStyle="Default">
+            <Theme>iOSTheme</Theme>
+        	<versionCode>1</versionCode>
+        	<versionName>1.0</versionName>
+        	<packagedName/>
+        	<applicationIcon/>
+        </iOS>
+       </application>	
+</manifest>
