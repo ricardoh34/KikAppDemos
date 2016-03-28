@@ -4,12 +4,12 @@
  */
 
 $win = new SDPanel();
-$win->setCaption("Task Detail");
+//$win->setCaption("Task Detail");
 
 $id = new InputNumeric();
 $id->setClass("input.Common");
+
 Data::getParm($id);
-echo $id;
 
 $name = new InputText();
 $name->setClass("input.Common");
@@ -54,7 +54,6 @@ $table->addControl($table_button,2,1,1,1,"Center","Bottom");
 $win->addControl($table);
 $win->Render();
 
-
 function save(){
 	
 	ProgressIndicator::Show();
@@ -74,18 +73,14 @@ function save(){
 	$rsValue = $sdtError['response'];
 	ProgressIndicator::Hide();
 	$win->Open("main");
-	
-	 
+		 
 }
 
-
-function clientStart(){
-	
-	echo $id;
+function Start(){
 	//Make JSON request	
-	$url = "http://demo.kikapptools.com/taskManager/crud/getTask.php";
+	$url = "http://demo.kikapptools.com/taskManager/crud/getTask.php?id=".$id;
 	$httpClient = new httpClient();
-	$httpClient->addVariable('id', $id);
+	//$httpClient->addVariable('id', $id);
 	$result = $httpClient->Execute('GET' ,$url);
 	
 	//Cast response data type
@@ -98,77 +93,13 @@ function clientStart(){
 
 	//Retrieve data to elements on screen
 	Data::FromJson($struct,$result);
-	//$name  = $struct['TASK'];
-	$image  = "http://demo.kikapptools.com/taskManager/services/".$struct['image'];
+	
+	$name  = $struct['task'];	
 	$status = $struct['status'];
+	$image  = $struct['image'];
 	
-
+	//set caption 
+	$win -> setCaption($name);
 }
 
-/*
-function load_image(){
-	$url = "http://www.devxtend.com/Gecko/magento/apiGecko/productos_imagen.php?pId=".$id;
-	$httpClient = new httpClient();
-	
-	$result = $httpClient->Execute('GET',$url);
-
-	$str_images = array(
-			array(
-					"url"=>type::Character(350)
-			)
-	);
-	
-	Data::FromJson($str_images,$result);
-	
-	foreach ($str_images as $img){
-		$image 	= $img['url'];
-	}	
-}
-
-function call(){
-	Interop::PlaceCall('099686088');
-}
-
-function email(){
-	Interop::SendEmail('',$title,"Mensaje del correo, tienda online!");
-}
-
-function sms(){
-	Interop::SendSMS('099696900','mensaje de texto desde tienda online..');
-}
-
-function view_image(){
-	echo "Product ".$title;	
-	$win->Open("list_image_product",$id);
-}
-
-function add_cart(){
-	$token = new InputText(80);
-	$token = StorageAPI::Get("token");
-		
-	if($token != null){		
-		ProgressIndicator::Show();
-		$url_cart = "http://www.devxtend.com/Gecko/magento/apiGecko/clientes.php?metodo=addProductToCart&qty=1&productId=".$id."&customerToken=".$token;
-		$hc = new httpClient();
-		$rs_cart = $hc->Execute("GET",$url_cart);
-			
-		$sdt_rs = array("error"=>type::Character(50));
-		
-		Data::FromJson($sdt_rs,$rs_cart);
-				
-		$rs = new InputText(50);
-		$rs = $sdt_rs['error'];
-
-		ProgressIndicator::Hide();
-		
-		if($rs == null){
-			echo "Saved! ";
-		}else{
-			echo $rs;
-		}
-	}else{
-		$win->Open("Login");
-	}	
-}
-*/
 ?>

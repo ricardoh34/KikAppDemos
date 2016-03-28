@@ -7,6 +7,9 @@
 $win = new SDPanel();
 $win->setCaption("Tasks list");
 
+$statusList = new InputNumeric();
+Data::getParm($statusList);
+
 //Add button to action bar
 $bar = new ActionBar();
 $btn_img = new ButtonBar();
@@ -68,11 +71,6 @@ $list->addControl($table_grid);
 $table->addControl($list);
 $win->addControl($table);
 $win->Render();
-
-
-function clientStart(){
-	//echo $statusList."**";
-}
 
 function load_grid(){
 		

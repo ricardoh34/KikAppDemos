@@ -81,14 +81,16 @@ function home(){
 }
 
 function add(){
-	$win->Open("TaskDetail");
+	$id = new InputNumeric();
+	$id=0;	
+	$win->Open("TaskDetail",$id);
 }
 
 function deleted()
 {
 	$statusList = new InputNumeric();
 	$statusList=3;
-	$win->Open("mainThumb", $statusList);	
+	$win->Open("mainThumb",$statusList);	
 }
 
 
