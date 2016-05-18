@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest>
+    <application generateAndroid="true" generateiOS="false">
+        <main>Shop.php</main>
+        <services>http://demo.kikapptools.com/MagentoShop/services/</services>
+        <applicationTitle>Magento Shop</applicationTitle>   	
+       	<!-- Adds -->
+       	<EnableAds/> <!-- True - False -->
+       	<AdsProvider/> <!-- AdMob - Mobfox - SmartAd -->
+       	<!-- Analytics -->
+       	<EnableAnalytics/> <!-- True - False -->
+       	<GoogleAnalyticsTrackerId/>
+       	<!-- Twitter -->
+       	<TwitterAppKey/>
+       	<TwitterAppSecret/>
+       	<!-- Facebook -->
+       	<FacebookAppId/>
+       	            	
+    	<android navigationStyle="Slide" layoutOrientation="Portrait">   
+    	    <Theme>AndroidTheme</Theme>     	
+        	<versionCode>1.0</versionCode>
+        	<versionName>1.0</versionName>
+        	<packagedName>com.kikapp.magentoshopv4</packagedName>
+        	<lunchImage>lunch.png</lunchImage>
+        	<applicationIcon>appicon.png</applicationIcon>
+        	<BaseStyle/> <!-- Default - Dark - Light - Light with Dark Action Bar -->
+        	<!-- AdMob Publisher Id -->
+        	<AdMobPublisherId/>	
+        	<!-- Android Maps API Key -->
+        	<MapAPIKey/>            	
+        	<!-- YouTube -->
+        	<AndroidYoutubeAPIKey/>        	
+        </android>
+        
+        <iOS layoutOrientation="Portrait" navigationStyle="Default">
+            <Theme>iOSTheme</Theme>
+        	<versionCode>1.0</versionCode>
+        	<versionName>1.0</versionName>
+        	<BundleIdentifier>com.kikapp.magentoshopv4</BundleIdentifier>
+        	<Devices>Universal</Devices> <!-- Universal - iPhone - iPad  -->
+        	<applicationIcon>appicon.png</applicationIcon>
+        	<lunchImage>lunchimage.png</lunchImage>
+        	<ExecuteType>KikAppEmulator</ExecuteType> <!-- Compile - KikAppEmulator -->
+        </iOS>
+        
+       </application>	
+</manifest>
