@@ -84,8 +84,6 @@ $table -> addControl($gridMov,1,1);
 
 $win -> addControl($table);
 
-
-
 function action_trans(){
 
 	$token = new InputText(80);

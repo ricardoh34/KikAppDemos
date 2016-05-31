@@ -15,6 +15,7 @@ Data::getParm($token,$idMov_trans);
 
 //Action bar and buttons bar
 $acb = new ActionBar();
+
 $btn_update = new ButtonBar();
 $btn_update -> setCaption("Save");
 $btn_update -> onTap(save());
@@ -25,6 +26,7 @@ $btn_cancel -> onTap(delete());
 
 $acb -> addControl($btn_update);
 $acb -> addControl($btn_cancel);
+
 $win -> addControl($acb);
 
 $mainTable= new Table();

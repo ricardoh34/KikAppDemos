@@ -33,8 +33,6 @@ $table_form -> addControl($email,1,1);
 $table_form -> addControl($password,2,1);
 $table_form -> addControl($password_2,3,1);
 
-
-
 $btn_save = new Button();
 $btn_save -> setCaption("SIGN UP");
 $btn_save -> setClass("button.blue");

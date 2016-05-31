@@ -26,8 +26,6 @@ $password -> setClass("input.form");
 $password -> setInviteMessage("Password");
 $password -> setIsPassword(true);
 
-
-
 $label= new Label();
 $label-> setCaption("OR");
 $label-> setClass("label.big");

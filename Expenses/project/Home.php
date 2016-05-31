@@ -15,7 +15,6 @@ $maintable -> setHeight("100%");
 $maintable-> setClass("table.global");
 $maintable -> setRowsStyle("100%");
 
-
 $table_first= new Table();
 $table_first-> setWidth("100%");
 $table_first-> setHeight("40%");
@@ -33,7 +32,7 @@ $canvas -> setHeight("100%");
 $label_account= new Label();
 $label_account->setCaption("Account");
 $label_account->setClass("label.black");
-//5dip,
+
 $input_account= new InputNumeric(11);
 $input_account-> setReadOnly(true);
 $input_account-> setClass("label.black");
@@ -89,7 +88,6 @@ $table_second-> setClass("table.first");
 $img_add = new Image();
 $img_add -> setImage("img/Android/hdpi/plus_circle.png");
 $img_add -> onTap(movements());
-
 
 $label_title= new InputText();
 $label_title-> setReadOnly(true);
@@ -149,7 +147,6 @@ $table_canvas -> addControl($canvas,1,1);
 $maintable-> addControl($table_canvas,1,1);
 
 $win -> addControl($maintable);
-
 
 function refresh() {
    $url = "http://demo.kikapptools.com/Gastos/crud/getIncome.php?id=".$token;
