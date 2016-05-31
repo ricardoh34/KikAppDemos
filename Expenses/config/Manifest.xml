@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <application generateAndroid="true" generateiOS="false">
+        <main>Slide.php</main>
+        <services>http://demo.kikapptools.com/Gastos/services/</services>
+        <applicationTitle>Expenses</applicationTitle>
+       	<!-- Adds -->
+       	<EnableAds></EnableAds> <!-- True - False -->
+       	<AdsProvider></AdsProvider> <!-- AdMob - Mobfox - SmartAd -->
+       	<!-- Analytics -->
+       	<EnableAnalytics></EnableAnalytics> <!-- True - False -->
+       	<GoogleAnalyticsTrackerId></GoogleAnalyticsTrackerId>
+       	<!-- Twitter -->
+       	<TwitterAppKey></TwitterAppKey>
+       	<TwitterAppSecret></TwitterAppSecret>
+       	<!-- Facebook -->
+       	<FacebookAppId></FacebookAppId>
+       	            	
+    	<android layoutOrientation="Portrait" navigationStyle="Slide">   
+    	    <Theme>AndroidTheme</Theme>     	
+        	<versionCode>1.0</versionCode>
+        	<versionName>1.0</versionName>
+        	<packagedName>com.kikapp.aplicaciongastos</packagedName>
+        	<lunchImage>lunch.png</lunchImage>
+        	<applicationIcon>appicon.png</applicationIcon>
+        	<BaseStyle>Light</BaseStyle> <!-- Default - Dark - Light - Light with Dark Action Bar -->
+        	<!-- AdMob Publisher Id -->
+        	<AdMobPublisherId></AdMobPublisherId>	
+        	<!-- Android Maps API Key -->
+        	<MapAPIKey></MapAPIKey>            	
+        	<!-- YouTube -->
+        	<AndroidYoutubeAPIKey></AndroidYoutubeAPIKey>        	
+        </android>
+        
+        <iOS layoutOrientation="Portrait" navigationStyle="Default">
+            <Theme>iOSTheme</Theme>
+        	<versionCode>1.0</versionCode>
+        	<versionName>1.0</versionName>
+        	<BundleIdentifier>com.kikapp.main</BundleIdentifier>
+        	<Devices>Universal</Devices> <!-- Universal - iPhone - iPad  -->
+        	<applicationIcon>lunchimage.png</applicationIcon>
+        	<lunchImage>lunchimage.png</lunchImage>
+        	<ExecuteType>KikAppEmulator</ExecuteType> <!-- Compile - KikAppEmulator -->
+        </iOS>
+       </application>	
+</manifest>

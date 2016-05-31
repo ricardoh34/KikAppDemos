@@ -1,0 +1,324 @@
+/**
+ * Theme CSS Android.
+ * @Version 1.0
+ */
+
+application{
+	action-tint-color: "#FFFFFF";
+}
+ 
+applicationBars{
+	background-color:"#32a3cb";
+	status-bar-color:"#4cbae3";
+	forecolor: "#FFFFFF";
+}
+
+input{
+ 	font-family:"Roboto-Regular.ttf";
+ 	font-size:"14";
+ 	forecolor:"Black 79%";
+}
+
+input.income{
+	font-size:"24";
+	font-family:"Roboto-Regular.ttf";
+	forecolor:"Black 79%";	
+	margin-top: 10dip;
+ 	margin-bottom: 10dip;
+ 	margin-left: 5dip;
+ 	margin-right: 5dip;
+}
+
+input.prueba{
+	font-size: "24";
+	label-class:"label.prueba";
+}
+
+input.titleblack{
+	 font-size:"20";
+	 font-family:"Roboto-Light.ttf";
+	 forecolor:"Black 89%";
+}
+
+input.form{
+	font-size:"19";
+	background-color:"#C0C0C0 25%";
+	margin-top:10dip;	
+	margin-bottom:10dip;
+	padding-left:5dip;
+}
+
+
+input.textPrice{
+	forecolor:#D6364A;
+	font-weight : "bold";
+}
+
+input.textListwhite{
+	forecolor:#FFFFFF;
+	font-weight : "bold";
+	margin-right:10dip;
+}
+
+input.categories {
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"16";	
+ 	forecolor:"#ffffff 95%";
+ 	margin-left:15dip; 
+}
+
+input.grey{
+	background-color: "#C0C0C0";
+   font-size:"24";
+}
+
+input.textTitlewhite{
+	forecolor:#FFFFFF;
+	font-weight : "bold";
+}
+
+input.grid {
+ 	font-family:"Roboto-Regular.ttf";
+ 	font-size:"18";
+ 	forecolor:"Black 79%";
+}
+
+button{
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"16";		
+}
+
+button.Form{
+	background-color:"#FFFFFF";
+	font-weight:"bold";
+	forecolor:#B71C1C;
+	margin-left:10dip;
+	margin-right:10dip;
+	margin-bottom:10dip;
+}
+
+button.blue{
+	background-color:"#32a3cb";
+	font-weight:"bold";
+	forecolor:"#FFFFFF";	
+	margin-top:15dip;
+	margin-left:8dip;
+	margin-right:8dip;
+	margin-bottom:0dip;
+}
+
+label{
+ 	font-family:"Roboto-Regular.ttf";
+ 	font-size:"18";
+ 	forecolor:"Black 79%";	
+}
+
+label.prueba{
+	forecolor:"#00FFFF";
+}
+
+label.big {
+	font-size: "38";
+}
+
+label.account {
+	background-color: "#00FFFF";
+	margin-top: "10dip";
+	margin-bottom: "10dip";
+}
+
+label.income {
+	background-color: "#00FF00";
+	margin-top: "10dip";
+	margin-bottom: "10dip";
+}
+
+label.outcome {
+	background-color: "#FF0000";
+	margin-top: "10dip";
+	margin-bottom: "10dip";
+}
+
+label.combo {
+	font-size:"24";	
+}
+
+label.black {
+   font-size:"24";	
+}
+
+label.red {
+	forecolor:"#FF0000";
+   font-size:"24";   
+}
+
+label.green {	
+	forecolor:"#00FF00";
+	font-size:"24";	
+}
+
+label.blue {	
+	forecolor:"#00FFFF";
+	font-size:"24";	
+}
+
+label.white {
+	font-size:"24";
+	forecolor: "#FFFFFF";
+}
+
+label.Titlelogin {
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"20";	
+}
+
+label.MenuOption {
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"17";	
+ 	forecolor:"#000000 95%";
+ 	background-color:"";
+}
+
+table{
+	margin-bottom:0dip;
+	margin-top:0dip;
+	margin-left:0dip;	
+	margin-right:0dip;	
+	background-color:"";
+}
+
+table.first{
+	background-color: "#FFFFFF";
+	margin-bottom:15dip;
+	margin-top:15dip;
+	margin-left:6dip;	
+	margin-right:6dip;
+	padding-left: 20dip;
+	padding-right: 20dip;
+}
+
+table.global{
+	background-color: "#DCDCDC";
+}
+
+table.white {
+	background-color: "#FFFFFF";
+}
+
+table.MenuOption{
+	margin-bottom:5dip;
+	margin-top:5dip;
+	margin-left:5dip;	
+	margin-right:5dip;
+}
+
+table.Menu{
+	background-color:"#DCDCDC";
+}
+
+table.grid {
+	background-color: "#DCDCDC";
+}
+
+table.GridProduct {
+	margin-bottom:10dip;
+	margin-top:10dip;
+	margin-left:10dip;
+	margin-right:10dip;
+	background-color:#FFFFFF;
+	border-style:"Solid";
+	border-color:#32a3cb;
+	border-width:"2dip";
+	border-radius:"1dip";
+	padding-left: 16dip;
+	padding-top: 25dip;
+	padding-bottom: 0dip;
+}
+
+
+table.forms {	
+	margin-left:10dip;
+	margin-right:10dip;
+	margin-bottom:20dip;
+	margin-top: 16dip;
+}
+
+table.account {
+	background-color: "#FFFFFF";
+	margin-bottom:0dip;
+	margin-top:150dip;
+	margin-left:5dip;	
+	margin-right:5dip;
+	padding-left: 10dip;
+	padding-right: 0dip;
+	border-color: "#32a3cb";
+	border-width: "3dip";
+	border-style: "solid";
+}
+
+table.acc {
+/*	padding-top: "10dip";*/
+}
+
+image{
+	
+}
+
+image.imageList {
+	margin-left:0dip;
+	margin-right:0dip;		
+	margin-top:0dip;
+	scale-type:"scaleAspectFillKeepingAspect";	
+}
+
+image.checkout {
+	margin-right:10dip;		
+	scale-type:"scaleAspectFillKeepingAspect";	
+}
+
+image.imageList2 {
+	margin-left:0dip;
+	margin-right:0dip;		
+	margin-top:5dip;
+	scale-type:"scaleAspectFillKeepingAspect";	
+}
+
+image.menu {	
+	margin-right:5dip;
+	width:"34dip";
+	height:"34dip";		
+	scale-type: "scaleToFill";	
+}
+
+grid{
+	Highlighted-Background-Color: "#DBDBDB";
+}
+
+grid.Thumb{
+	//ver estas opciones porque no las esta cargando.
+	Show-Horizontal-Line-Separator-Between-Rows:"true";
+	Horizontal-Line-Separator:"HorizontalLineThumb";
+}
+
+HorizontalLine{}
+
+HorizontalLine.Thumb{
+	background-color: #FFFFFF;
+	Height:"5dip";
+}
+
+Tab{
+	Tab-Strip-Background-Color:#94C641;
+	Tab-Strip-Indicator-color:"Gainsboro";
+	Tab-Strip-Separator-Color:#DBDBDB;
+}
+
+TabPage{
+	
+}
+
+PageController{
+	background-color:#DCDCDC;
+	Indicator-Selected-Color:"#EE4053";
+	Indicator-Unselected-Color:#EE4053;	
+}
