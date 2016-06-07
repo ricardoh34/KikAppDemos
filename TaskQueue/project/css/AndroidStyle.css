@@ -1,0 +1,129 @@
+/** 
+ * Style for Android appliaction.
+ * 
+ */
+
+application{
+ 	action-tint-color: "#FFFFFF";
+ }
+ 
+applicationBars{
+	background-color:"#04a0b9";
+	status-bar-color:"#18adc3";
+	forecolor:"#FFFFFF";
+}
+
+applicationBars.transparent{
+	background-color:"#04a0b9";
+	status-bar-color:"Transparent";
+}
+
+image.actionBarIcon {	
+	margin-right:5dip;
+	width:"20dip";
+	height:"20dip";		
+	scale-type: "scaleToFill";	
+}
+
+input.Title{
+	font-size:"15";
+	font-family:"Roboto-Light.ttf";
+	font-weight:"bold";
+	forecolor:"#000000";
+	margin-left:5dip;
+}
+input.Common{
+	font-size:"13";
+	font-family:"Roboto-Light.ttf";
+	forecolor:"#262626";
+}
+
+button.Form{	
+	font-weight:"bold";
+	forecolor:"#04a0b9";
+	font-size:"17";
+	margin-left:8dip;
+	margin-right:8dip;
+	border-style:"Solid";
+	border-color:#04a0b9;
+	border-width:"1dip";
+	border-radius:"5dip";
+	background-color:"#FFFFFF";
+	
+}
+
+table.Menu{
+	background-color:"#fafafa";
+}
+
+table.Background {
+	background-color:"#fafafa";
+}
+
+table.Forms {	
+	margin-left:10dip;
+	margin-right:10dip;
+	margin-bottom:20dip;
+}
+table.MenuItem{
+	margin-top:5dip;
+	margin-left:5dip;	
+	margin-right:5dip;
+	background-color:"#FFFFFF";
+}
+
+table.Header{
+	background-image:url("img/header.png");
+	backgroundimagefillmode:"Scale To Fill";
+	/*"Tile";*/	
+}
+
+label.MenuItem{
+	font-family:"Roboto-Regular.ttf";
+ 	font-size:"15";	
+ 	margin-left:3dip;
+ 	forecolor:"#000000";
+}
+
+image.MenuHeader{
+	padding-left:"10dip";
+	scale-type:"originalSize";
+}
+
+image.MenuItem {	
+	margin-right:5dip;
+	width:"26dip";
+	height:"26dip";		
+	scale-type: "scaleToFill";	
+}
+
+image.ListIcon {
+	width:"24dip";
+	height:"24dip";	
+}
+
+image.ListItem {	
+	margin-left:10dip;
+	margin-top:5dip;
+	margin-bottom:5dip;
+	width:"45dip";
+	height:"45dip";		
+	scale-type: "scaleToFill";	
+}
+
+input.check {
+	border-style:"Solid";
+	border-color:#D8D8D8;
+	border-width:"1dip";
+	border-radius:"1dip";
+}
+table.DetailMain {
+	margin-top:2dip;
+	margin-left:5dip;
+	margin-right:5dip;
+	background-color:#FFFFFF;
+	border-style:"Solid";
+	border-color:#D8D8D8;
+	border-width:"1dip";
+	border-radius:"1dip";
+}
