@@ -74,8 +74,6 @@ table.MenuItem{
 
 table.Header{
 	background-image:url("img/header.png");
-	backgroundimagefillmode:"Scale To Fill";
-	/*"Tile";*/	
 }
 
 label.MenuItem{
