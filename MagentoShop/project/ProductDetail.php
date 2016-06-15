@@ -7,7 +7,8 @@ $win = new SDPanel();
 //$win -> setCaption("Detail of product");
 
 $id = new InputNumeric();
-Data::getParm($id,$title,$desc,$price,$stock);
+$productUrl = new InputText();
+Data::getParm($id,$title,$desc,$price,$stock, $productUrl);
 
 $table = new Table();
 $table -> setClass("tableGray");
@@ -20,22 +21,22 @@ $acg1 -> setImage("img/ic_share.png");
 
 $btn_facebook = new ButtonBar();
 $btn_facebook -> setCaption("Facebook");
-$btn_facebook -> setImage("img/Android/hdpi/ic_facebook.png");
+$btn_facebook -> setImage("img/ic_facebook.png");
 $btn_facebook -> onTap(facebook());
 
 $btn_tw = new ButtonBar();
 $btn_tw -> setCaption("Twitter");
-$btn_tw -> setImage("img/Android/hdpi/ic_tw.png");
+$btn_tw -> setImage("img/ic_tw.png");
 $btn_tw -> onTap(twitter());
 
 $btn_sms = new ButtonBar();
 $btn_sms -> setCaption("SMS");
-$btn_sms -> setImage("img/Android/hdpi/ic_sms.png");
+$btn_sms -> setImage("img/ic_sms.png");
 $btn_sms -> onTap(sms());
 
 $btn_email = new ButtonBar();
 $btn_email -> setCaption("EMail");
-$btn_email -> setImage("img/Android/hdpi/ic_email.png");
+$btn_email -> setImage("img/ic_email.png");
 $btn_email -> onTap(email());
 
 $acg1 -> addControl($btn_facebook);
@@ -71,7 +72,7 @@ $stock -> setReadOnly(true);
 $grid = new HorizontalGrid();
 $grid -> setRowsPerPagePortrait(1);
 $grid -> setShowPageController(true);
-$grid -> setPageControllerBackColor("#FFFFFF");
+//$grid -> setPageControllerBackColor("#FFFFFF");
 $grid -> addData(load_image());
 //$grid -> onTap(view_image());
 $grid -> setPageControllerClass("table.grid");
@@ -107,7 +108,6 @@ $table -> setRowsStyle("250dip;100%");
  
 $win -> addControl($table, 1, 1, 1, 2);
 
-
 function load_image(){
 	$url = "http://www.demo.kikapptools.com/magento/apiKikApp/ProductImages.php?pId=".$id;
 	$httpClient = new httpClient();
@@ -124,30 +124,29 @@ function load_image(){
 	
 	foreach ($str_images as $img){
 		$image 	= $img['url'];
-		echo $image;
 	}	
 }
 
 function facebook(){
-	Facebook::PostToWall($title,$title,$desc,'',$image);
+	Facebook::PostToWall($title,$title,$productUrl,'',$image);
 }
 
 function twitter(){
-	Twitter::Tweet($title,$image);
+	Twitter::Tweet($productUrl);
 }
 
 function email(){
-	Interop::SendEmail('',$title,$desc);
+	Interop::SendEmail('',$title,$productUrl);
 }
 
 function sms(){
-	Interop::SendSMS('',$title);
+	Interop::SendSMS('',$productUrl);
 }
-
+/*
 function view_image(){
-	$win -> Open("ProductImage",$id);
+	$win -> Open("ProductImage",$id, $title);
 }
-
+*/
 function add_cart(){
 	$token = new InputText(80);
 	$token = StorageAPI::Get("token");

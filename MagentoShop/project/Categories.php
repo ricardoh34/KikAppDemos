@@ -10,6 +10,7 @@ $table = new Table();
 
 $list = new Grid();
 $list -> addData(load_grid());
+$list->setEmptyGridText("No items available");
 $list -> onTap(action());
 
 $id = new InputNumeric();

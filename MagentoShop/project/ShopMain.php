@@ -8,7 +8,26 @@ $win = new SDPanel();
 $win -> setCaption(" ");
 
 $table = new Table();
-$table -> setClass("tableMenu");
+$table -> setClass("table.Menu");
+$table-> setRowsStyle("150dip;50dip");
+
+
+//Menu Header
+$table_header = new Table();
+$table_header -> setClass("table.Header");
+$table_header -> setColumnsStyle("15%;85%");
+$table_header -> setRowsStyle("50dip;90dip");
+
+$headerImage = new Image();
+$headerImage->setClass("image.MenuHeader");
+$headerImage->setImage("img/userIcon.png");
+
+$headerLabel = new InputText();
+$headerLabel->setClass("input.titleWhite");
+$headerLabel->setReadOnly(true);
+ 
+$table_header->addControl($headerImage,2,1,1,1,"Left","Middle");
+$table_header->addControl($headerLabel,2,2,1,1,"Left","Middle");
 
 
 $table_home = new Table();
@@ -16,7 +35,7 @@ $table_home -> setClass("tableMenuOption");
 $table_home -> setColumnsStyle("20%;80%");
 
 $img_home = new Image();
-$img_home -> setImage("img/Android/hdpi/ic_home.png");
+$img_home -> setImage("img/ic_home.png");
 $img_home -> setClass("imagemenu");
 
 $lbl_home = new Label();
@@ -32,7 +51,7 @@ $table_products -> setClass("tableMenuOption");
 $table_products -> setColumnsStyle("20%;80%");
 
 $img_products = new Image();
-$img_products -> setImage("img/Android/hdpi/ic_product.png");
+$img_products -> setImage("img/ic_product.png");
 $img_products -> setClass("imagemenu");
 
 $lbl_list = new Label();
@@ -48,7 +67,7 @@ $table_cat -> setClass("tableMenuOption");
 $table_cat -> setColumnsStyle("20%;80%");
 
 $img_cat = new Image();
-$img_cat -> setImage("img/Android/hdpi/ic_category.png");
+$img_cat -> setImage("img/ic_category.png");
 $img_cat -> setClass("imagemenu");
 
 $lbl_categorias = new Label();
@@ -65,7 +84,7 @@ $table_login -> setColumnsStyle("20%;80%");
 $table_login -> setInvisibleMode("Collapse Space");
 
 $img_login = new Image();
-$img_login -> setImage("img/Android/hdpi/ic_login.png");
+$img_login -> setImage("img/ic_login.png");
 $img_login -> setClass("imagemenu");
 
 $lbl_login = new Label();
@@ -81,7 +100,7 @@ $table_UserData -> setClass("tableMenuOption");
 $table_UserData -> setColumnsStyle("20%;80%");
 
 $img_UserData = new Image();
-$img_UserData -> setImage("img/Android/hdpi/ic_mydata.png");
+$img_UserData -> setImage("img/ic_mydata.png");
 $img_UserData -> setClass("imagemenu");
 
 $lbl_datos = new Label();
@@ -97,7 +116,7 @@ $table_mycart -> setClass("tableMenuOption");
 $table_mycart -> setColumnsStyle("20%;80%");
 
 $img_mycart = new Image();
-$img_mycart -> setImage("img/Android/hdpi/ic_cart.png");
+$img_mycart -> setImage("img/ic_cart.png");
 $img_mycart -> setClass("imagemenu");
 
 $lbl_cart = new Label();
@@ -113,7 +132,7 @@ $table_logout -> setClass("tableMenuOption");
 $table_logout -> setColumnsStyle("20%;80%");
 
 $img_logout = new Image();
-$img_logout -> setImage("img/Android/hdpi/ic_logout.png");
+$img_logout -> setImage("img/ic_logout.png");
 $img_logout -> setClass("imagemenu");
 
 $lbl_logout = new Label();
@@ -124,9 +143,8 @@ $table_logout -> onTap(logout());
 $table_logout -> addControl($img_logout,1,1,1,1,"Center","Middle");
 $table_logout -> addControl($lbl_logout,1,2,1,1,"Left","Middle");
 
-$table_space = new Table();
-
-$table -> addControl($table_space,1,1);
+//Add controls to menu
+$table -> addControl($table_header,1,1);
 $table -> addControl($table_home,2,1);
 $table -> addControl($table_products,3,1);
 $table -> addControl($table_cat,4,1);
@@ -142,6 +160,7 @@ $win -> Render();
 
 function Slide(){	
 	$token = new InputText(80);
+	//$userName = new InputText(80);
 	$win -> Open("Home");		
 }
 
@@ -185,17 +204,23 @@ function logout(){
  * This function is execute in event user and is the first event in execute
  */ 
 function ClientStart(){
-	$token = StorageAPI::Get("token");
+		
+	$token   = StorageAPI::Get("token");
+	//$userName = StorageAPI::Get("userName");
+	
 	if($token == null){
 		$table_UserData -> setVisible(false);
 		$table_mycart -> setVisible(false);
 		$table_logout -> setVisible(false);
 		$table_login -> setVisible(true);
+		$headerLabel->setValue("Magento KikApp Store");
 	}else{
 		$table_login -> setVisible(false);
-		$table_UserData -> setVisible(true);
+		$table_UserData->setVisible(true);
 		$table_mycart -> setVisible(true);
-		$table_logout -> setVisible(true);		
+		$table_logout -> setVisible(true);
+		$headerLabel = StorageAPI::Get("userName");
+			
 	}	
 }
 

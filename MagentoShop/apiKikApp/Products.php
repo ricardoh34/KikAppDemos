@@ -68,7 +68,6 @@ if($display!=""){
     ->load();
 }
     
-	$currencyCode = Mage::app()->getStore()->getBaseCurrencyCode();
 	$nameAnt = "";
 	//$json[] = array();
     foreach($collection as $product){ 
@@ -84,7 +83,7 @@ if($display!=""){
                 'id'                    => $product->getId(),
                 'name'                  => str_replace('"',"", $product->getName()),
                 'description'           => str_replace('"',"", $product->getShortDescription()),
-                'pirce'                 => Mage::helper('core')->currency($product->getPrice(), true, false), //." ".$currencyCode,
+                'pirce'                 => Mage::helper('core')->currency($product->getPrice(), true, false),
                 'href'                  => str_replace(REPLACEINURL, "", $product->getProductUrl()),
                 'thumb'                 => str_replace(REPLACEINURL, "", $product->getImageUrl()),
                 'category'              => $cat,

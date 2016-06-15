@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest>
     <application generateAndroid="true" generateiOS="false">
-        <main>Shop.php</main>
+        <main>ShopMain.php</main>
         <services>http://demo.kikapptools.com/MagentoShop/services/</services>
-        <applicationTitle>Magento Shop</applicationTitle>   	
+        <applicationTitle>Magento Shop</applicationTitle>    	
        	<!-- Adds -->
        	<EnableAds/> <!-- True - False -->
        	<AdsProvider/> <!-- AdMob - Mobfox - SmartAd -->
@@ -19,7 +19,7 @@
     	    <Theme>AndroidTheme</Theme>     	
         	<versionCode>1.0</versionCode>
         	<versionName>1.0</versionName>
-        	<packagedName>com.kikapp.magentoshopv4</packagedName>
+        	<packagedName>com.kikapp.magentorelease</packagedName>
         	<lunchImage>lunch.png</lunchImage>
         	<applicationIcon>appicon.png</applicationIcon>
         	<BaseStyle/> <!-- Default - Dark - Light - Light with Dark Action Bar -->
@@ -35,10 +35,10 @@
             <Theme>iOSTheme</Theme>
         	<versionCode>1.0</versionCode>
         	<versionName>1.0</versionName>
-        	<BundleIdentifier>com.kikapp.magentoshopv4</BundleIdentifier>
+        	<BundleIdentifier>com.kikapp.magentorelease</BundleIdentifier>
         	<Devices>Universal</Devices> <!-- Universal - iPhone - iPad  -->
         	<applicationIcon>appicon.png</applicationIcon>
-        	<lunchImage>lunchimage.png</lunchImage>
+        	<lunchImage>launchimage.png</lunchImage>
         	<ExecuteType>KikAppEmulator</ExecuteType> <!-- Compile - KikAppEmulator -->
         </iOS>
         

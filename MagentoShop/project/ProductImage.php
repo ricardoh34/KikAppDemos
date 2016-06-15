@@ -6,7 +6,8 @@
 $win = new SDPanel();
 $win -> setCaption("Product images");
 $id = new InputNumeric();
-Data::getParm($id);
+$title 	= new InputText(150);
+Data::getParm($id, $title);
 
 $table = new Table();
 
@@ -33,7 +34,7 @@ $win -> addControl($table);
 function load_image(){
 	$url = "http://demo.kikapptools.com/magento/apiKikApp/ProductImages.php?pId=".$id;
 	$httpClient = new httpClient();
-	
+	echo $id;
 	$result = $httpClient -> Execute('GET',$url);
 
 	$str_images = array(
@@ -47,6 +48,10 @@ function load_image(){
 	foreach ($str_images as $img){
 		$image 	= $img['url'];
 	}	
+}
+
+function start(){
+	$win -> setCaption($title);
 }
 
 

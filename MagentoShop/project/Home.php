@@ -6,6 +6,14 @@
 $win = new SDPanel();
 $win -> setCaption("KikApp Store");
 
+$acb = new ActionBar();
+$btn_cart = new ButtonBar();
+$btn_cart -> setCaption("Cart");
+$btn_cart -> setImage("img/cart.png");
+$btn_cart -> onTap(goToCart());
+$acb -> addControl($btn_cart);
+$win -> addControl($acb);
+
 $table = new Table();
 $table -> setClass("tableGray");
 
@@ -86,6 +94,8 @@ $table -> addControl($grid,2,1);
 $win -> addControl($table);
 $win -> Render();
 
+
+//Grid load function
 function grid_load(){
 	$url = "http://demo.kikapptools.com/magento/apiKikApp/Products.php?display=home";
 	$httpClient = new httpClient();
@@ -99,14 +109,16 @@ function grid_load(){
 					"description" => DataType::Character(300),							
 					"pirce" => DataType::Character(10),
 					"thumb"=> DataType::Character(200),
-					"stock" => DataType::Character(50)
+					"stock" => DataType::Character(50),
+					"href" => DataType::Character(300)
 				)
 	);
 	
 	
 	Data::FromJson($struct,$result);
-	$stock 	= new InputText();
-	$id 	= new InputNumeric();
+	$prodUrl 		= new InputText();
+	$stock 			= new InputText();
+	$id 			= new InputNumeric();
 	
 	foreach ($struct as $product){		
 		$id 	= $product['id'];
@@ -115,6 +127,7 @@ function grid_load(){
 		$image 	= $product['thumb'];
 		$price 	= $product['pirce'];
 		$stock 	= $product['stock'];
+		$prodUrl= $product['href'];
 	}
 	
 }
@@ -124,8 +137,6 @@ function grid_load_products(){
 	$httpClient_prod = new httpClient();
 
 	$result_prod = $httpClient_prod -> Execute('GET',$url_prod);
-
-
 	$struct_prod = array(
 			array(
 					"id" => DataType::Numeric(6),
@@ -133,31 +144,48 @@ function grid_load_products(){
 					"description" => DataType::Character(300),
 					"pirce" => DataType::Character(10),
 					"thumb"=> DataType::Character(200),
-					"stock" => DataType::Character(50)
+					"stock" => DataType::Character(50),
+					"href" => DataType::Character(300)
 			)
 	);
 
 	Data::FromJson($struct_prod,$result_prod);
-	$stock_prod = new InputText();
-	$id_prod	= new InputNumeric();
+	$prodUrl_prod	= new InputText();
+	$stock_prod 	= new InputText();
+	$id_prod		= new InputNumeric();
 
 	foreach ($struct_prod as $product){
-		$id_prod 	= $product['id'];
+		$id_prod 		= $product['id'];
 		$title_prod 	= $product['name'];
-		$desc_prod 	= $product['description'];
+		$desc_prod 		= $product['description'];
 		$image_prod 	= $product['thumb'];
 		$price_prod 	= $product['pirce'];
 		$stock_prod 	= $product['stock'];
+		$prodUrl_prod	= $product['href'];
 	}
 	
 }
 
+function ClientStart(){
+	$token = new InputText(80);	
+	$token = StorageAPI::Get("token");
+	if($token == null){
+		$btn_cart -> setVisible(false);
+	}else{
+		$btn_cart -> setVisible(true);		
+	}
+}
+
+function goToCart(){
+	$win -> Open("ShoppingCart",$token);
+}
+
 function action(){
-	$win -> Open("ProductDetail",$id,$title,$desc,$price,$stock);
+	$win -> Open("ProductDetail",$id,$title,$desc,$price,$stock,$prodUrl);
 }
 
 function action_prod(){
-	$win -> Open("ProductDetail",$id_prod,$title_prod,$desc_prod,$price_prod,$stock_prod);
+	$win -> Open("ProductDetail",$id_prod,$title_prod,$desc_prod,$price_prod,$stock_prod,$prodUrl_prod);
 }
 
 ?>

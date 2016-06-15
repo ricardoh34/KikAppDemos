@@ -74,16 +74,19 @@ function login(){
 			
 			$result = $httpClient_post -> Execute('POST',$url);
 			
-			$customerToken = new InputText();	
-			$response = array("customerToken"=>DataType::Character(150));
+			$customerToken = new InputText();
+			$userName = new InputText();	
+			$response = array("customerToken"=>DataType::Character(150), "userName"=>DataType::Character(150));
 			
 			Data::FromJson($response,$result);
-				
 			$customerToken = $response['customerToken'];
+			$userName 	   = $response['userName'];
+			
 			ProgressIndicator::Hide();
 						
 			if($customerToken != ""){
 				StorageAPI::Set("token",$customerToken);
+				StorageAPI::Set("userName",$userName);
 				AndroidAction::GoHome();
 			}else{
 				echo "Invalid user";

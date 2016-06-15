@@ -31,6 +31,7 @@ $table_grid -> setClass("tableTableDetailMain");
 $grid -> addSearch($title);
 $grid -> addData(grid_load());
 $grid -> onTap(action());
+$grid -> setEmptyGridText("No items available");
 
 //inputs and controls
 $title 	= new InputText(150);
@@ -64,7 +65,7 @@ function lista(){
 	$win -> Open("ProductList",$cat);
 }
 
-//Funcin de carga
+//Grid load function
 function grid_load(){
 	$url = "http://demo.kikapptools.com/magento/apiKikApp/Products.php?cId=".$cat;
 	$httpClient = new httpClient();
@@ -78,13 +79,15 @@ function grid_load(){
 							"description" => DataType::Character(300),							
 							"pirce" => DataType::Character(10),
 							"thumb"=>DataType::Character(200),
-							"stock" => DataType::Character(50)
+							"stock" => DataType::Character(50),
+							"href" => DataType::Character(300)
 						)
 				);
 	
 	Data::FromJson($struct,$result);
-	$stock  = new InputText();
-	$id = new InputNumeric();
+	$prodUrl 	= new InputText();
+	$stock  	= new InputText();
+	$id 		= new InputNumeric();
 	
 	foreach ($struct as $product){		
 		$id 	= $product['id'];
@@ -93,12 +96,13 @@ function grid_load(){
 		$image 	= $product['thumb'];
 		$price 	= $product['pirce'];
 		$stock 	= $product['stock'];
+		$prodUrl= $product['href'];
 	}
 	
 }
 
 function action(){
-	$win -> Open("ProductDetail",$id,$title,$desc,$price,$stock);
+	$win -> Open("ProductDetail",$id,$title,$desc,$price,$stock,$prodUrl);
 }
 
 ?>

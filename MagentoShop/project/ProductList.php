@@ -31,9 +31,11 @@ $table_grid -> setRowsStyle("80dip");
 $table_grid -> setColumnsStyle("35%;65%;15dip");
 $table_grid -> setHeight("85dip");
 
+
 $grid -> addSearch($title);
 $grid -> addData(grid_load());
 $grid -> onTap(action());
+$grid -> setEmptyGridText("No items available");
 
 //inputs and controls
 $title 	= new InputText(150);
@@ -66,7 +68,7 @@ function changeView(){
 	$win -> Open("ProductThumbList",$cat);
 }
 
-//Function load data in grid.
+//Grid load function
 function grid_load(){
 	$url = "http://demo.kikapptools.com/magento/apiKikApp/Products.php?cId=".$cat;
 	$httpClient = new httpClient();
@@ -80,12 +82,13 @@ function grid_load(){
 							"description" => DataType::Character(300),							
 							"pirce" => DataType::Character(10),
 							"thumb"=>DataType::Character(200),
-							"stock" => DataType::Character(50)
+							"stock" => DataType::Character(50),
+							"href" => DataType::Character(300)
 						)
 				);
 	
 	Data::FromJson($struct,$result);
-	
+	$prodUrl= new InputText();
 	$id 	= new InputNumeric();
 	$stock  = new InputText();
 
@@ -96,12 +99,13 @@ function grid_load(){
 		$image 	= $product['thumb'];
 		$price 	= $product['pirce'];
 		$stock 	= $product['stock'];
+		$prodUrl= $product['href'];
 	}
 	
 }
 	
 function action(){
-	$win -> Open("ProductDetail",$id,$title,$desc,$price,$stock);
+	$win -> Open("ProductDetail",$id,$title,$desc,$price,$stock,$prodUrl);
 }
 
 ?>

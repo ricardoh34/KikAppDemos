@@ -7,9 +7,8 @@
  * api.php retrieve api methods
  */
 
-
-require_once('Utils.php');
 session_start();
+require_once('Utils.php');
 $metodo = (isset($_GET['metodo']) && $_GET['metodo']!=null)?$_GET['metodo']:'';
 $response = array();
 define("REPLACEINURL", "apiKikApp/");
@@ -18,7 +17,10 @@ define("REPLACEINURL", "apiKikApp/");
 if($metodo!=''){ 
     
 	require_once('../app/Mage.php');
-	Mage::app('default');
+	umask(0);	
+	//Mage::app('default');
+	Mage::app();
+    Mage::getSingleton("core/session", array("name" => "frontend"));
 
     switch ($metodo) {
         
@@ -161,7 +163,7 @@ if($metodo!=''){
                 break;
             }
 
-            clearUserCart($customerToken);
+            clearUserCart($customerToken, $response);
         
         break;
 		case 'createUser': //http://www.demo.kikapptools.com/magento/apiKikApp/api.php?metodo=createUser, crea un usuario
