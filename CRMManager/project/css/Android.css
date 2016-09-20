@@ -35,25 +35,43 @@ button{
 	border-style:"solid";
 	font-family:"Roboto-Light.ttf";
 }
+
+image.InputImage{
+	placeholder-image:url("img/prueba.png");
+	
+}
   
 image.list{
-	border-radius:"43";
 	margin-top:"10dip";
-	margin-bottom:10dip;
-	margin-left:"10";
-	margin-Right:"10dip";
-	placeholder-image:url("img/no_image.png");
-}
-
-image.roundBorder{	
+	margin-left:"0dip";
+	margin-right:"10dip";
+	margin-bottom:"5dip";
+	scale-type: "scaleAspectFillKeepingAspect";
+	
 	border-style:"solid";
 	border-width:0;
 	border-color:"#FFFFFF";
 	border-radius:"75";
+	
+	width:"70dip";
+	height:"70dip";	
+	placeholder-image:url("img/no_image.png");
+}
+
+image.roundBorder{	
 	margin-top:"10dip";
-	margin-bottom:10dip;
-	margin-left:"10";
-	margin-Right:"10dip";
+	margin-left:"0dip";
+	margin-right:"10dip";
+	margin-bottom:"5dip";
+	scale-type: "scaleAspectFillKeepingAspect";
+	
+	border-style:"solid";
+	border-width:0;
+	border-color:"#FFFFFF";
+	border-radius:"75";
+	
+	width:"130dip";
+	height:"130dip";	
 	placeholder-image:url("img/no_image.png");
 }
 

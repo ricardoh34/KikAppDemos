@@ -27,11 +27,19 @@ $acb -> addControl($btn_cancel);
 $win -> addControl($acb);
 
 $mainTable = new Table();
+$mainTable-> setRowsStyle("64dip;64dip;64dip;100%;")
 
 $image 	= new InputImage();
+
 $name 	= new InputText();
+$name -> setLabelCaption("Name");
+
 $address = new InputAddress();
+$address -> setLabelCaption("Address");
+
 $phone 	= new InputPhone();
+$phone -> setLabelCaption("Phone");
+
 
 $mainTable -> addControl($name,1,1);
 $mainTable -> addControl($address,2,1);

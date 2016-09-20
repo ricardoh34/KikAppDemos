@@ -1,40 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest>
-    <application generateAndroid="true" generateiOS="false">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest>
+    <application generateAndroid="true" generateiOS="false" version="39.0">
         <main>list_companies.php</main>
         <services>http://demo.kikapptools.com/CRMManager/services/</services>
-    	<android navigationStyle="Default" layoutOrientation="Portrait">   
+        <applicationTitle>CRM Manager</applicationTitle>    	
+       	<!-- Adds -->
+       	<EnableAds/> <!-- True - False -->
+       	<AdsProvider/> <!-- AdMob - Mobfox - SmartAd -->
+       	<!-- Analytics -->
+       	<EnableAnalytics/> <!-- True - False -->
+       	<GoogleAnalyticsTrackerId/>
+       	<!-- Twitter -->
+       	<TwitterAppKey/>
+       	<TwitterAppSecret/>
+       	<!-- Facebook -->
+       	<FacebookAppId/>
+		<EnableNotification>False</EnableNotification>
+       	            	
+    	<android layoutOrientation="Portrait" navigationStyle="Default">   
     	    <Theme>Android</Theme>     	
-        	<versionCode>1</versionCode>
+        	<versionCode>1.0</versionCode>
         	<versionName>1.0</versionName>
-        	<packagedName></packagedName>
+        	<packagedName>com.kikapp.crmmanagerv2</packagedName>
         	<lunchImage>lunchimage.png</lunchImage>
-        	<applicationIcon>appicon.png</applicationIcon>        	
-        	<applicationTitle>CRM Manager</applicationTitle>
+        	<applicationIcon>appicon.png</applicationIcon>
+        	<BaseStyle/> <!-- Default - Dark - Light - Light with Dark Action Bar -->
+        	<!-- AdMob Publisher Id -->
+        	<AdMobPublisherId/>	
         	<!-- Android Maps API Key -->
         	<MapAPIKey/>            	
-        	<!-- Adds -->
-        	<EnableAds>False</EnableAds>
-        	<AdsProvider></AdsProvider> <!-- AdMob - Mobfox - SmartAd -->
-        	<AdMobPublisherId></AdMobPublisherId>
-        	<!-- Analytics -->
-        	<EnableAnalytics>False</EnableAnalytics>
-        	<GoogleAnalyticsTrackerId></GoogleAnalyticsTrackerId>
-        	<!-- Twitter -->
-        	<TwitterAppKey></TwitterAppKey>
-        	<TwitterAppSecret></TwitterAppSecret>
-        	<!-- Facebook -->
-        	<FacebookAppId></FacebookAppId>
         	<!-- YouTube -->
-        	<AndroidYoutubeAPIKey></AndroidYoutubeAPIKey>        	
-        	
+        	<AndroidYoutubeAPIKey/>  
+			<AndroidSenderId/>    
+			<AndroidSenderAPIKey/>			
         </android>
-        <iOS navigationStyle="Default" layoutOrientation="Portrait">
+        
+		<iOS layoutOrientation="Portrait" navigationStyle="Default">
             <Theme>iOSTheme</Theme>
-        	<versionCode>1</versionCode>
+        	<versionCode>1.0</versionCode>
         	<versionName>1.0</versionName>
-        	<packagedName></packagedName>
-        	<applicationIcon></applicationIcon>
+        	<BundleIdentifier>com.kikapp.crmmanagerv2</BundleIdentifier>
+        	<Devices>Universal</Devices> <!-- Universal - iPhone - iPad  -->
+        	<applicationIcon>appicon.png</applicationIcon>
+        	<lunchImage>launchimage.png</lunchImage>
+        	<ExecuteType>KikAppEmulator</ExecuteType> <!-- Compile - KikAppEmulator -->
+			<LocationAlwaysUsage/>
+			<LocationWhenInUseUsage/>
+			<AllowsArbitraryLoads/>
         </iOS>
+        
        </application>	
 </manifest>

@@ -29,7 +29,7 @@ $win -> addControl($acb);
 $mainTable = new Table();
 $mainTable -> setEnableHeaderRowPattern(true);
 $mainTable -> setHeaderRowApplicationBarsClass("applicationBars.transparent");
-$mainTable -> setRowsStyle("150dip;pd;pd");
+$mainTable -> setRowsStyle("150dip;pd");
 
 $tableImg = new Table();
 $tableImg -> setClass("table.image");
