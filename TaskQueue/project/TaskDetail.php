@@ -11,7 +11,7 @@ $id = new InputNumeric();
 $id->setClass("input.Common");
 Data::getParm($id);
 
-//Define the acrtion bar
+//Define the action bar
 $bar = new ActionBar();
 $btn_delete = new ButtonBar();
 $btn_delete->setCaption("Delete");
